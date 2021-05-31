@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Caesar Cipher</title>
+
+      <!-- Bootstrap CSS -->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+      
+      <style>
+        /* for all */
+        table.matrix {
+          display: inline-block;
+          width: auto; /*shrink table width*/
+          border-collapse: collapse; /*make the line inside augmented matrix collapse*/
+          font-weight: bold;
+        }
+
+        /* table.matrix tr {
+          border: none !important;
+        } */
+        /* for all */
+        table.matrix td {
+          padding: 0.5rem 1rem 0.5rem 1rem;
+          text-align: center;
+          border: 2px solid black; /*create outer brackets*/
+        }
+        .highlight{
+          background-color: #c8d9eb;
+        }
+
+      </style>
+      
+    <script defer type="module" src="./playfair.js"></script>
+
+    <!-- Bootstrap -->
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+
+    
+  </head>
+  <body>
+    <!-- NavBar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/index.html">Computer Security</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+          aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarScroll">
+          <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/index.html">Caesar Cipher</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/playfair.html">Playfair Cipher</a>
+            </li>
+
+          </ul>
+          
+        </div>
+      </div>
+    </nav>
+
+      <div class="card m-3">
+        <div class="card-body">
+          <h4 class="card-title">Plain text:</h4>
+          <form class="form">
+
+            <div class="col col-12 mx-1">
+              <textarea class="form-control" name="input" id="input"></textarea>
+            </div>
+
+            <div class="row mx-5 my-4">
+              <div class="col col-6">
+                <div class="form-check-inline">
+                  <input class="form-check-input" type="radio" id="encrypt" name="operation" value="encrypt" checked>
+                  <label class="form-check-label" for="encrypt">Encrypt</label>
+                </div>
+
+                <div class="form-check-inline">
+                    <input class="form-check-input" type="radio" id="decrypt" name="operation" value="decrypt">
+                    <label class="form-check-label" for="decrypt">Decrypt</label>
+                </div>
+              </div>
+
+              <div class="col col-6">
+                <label for="key">key</label>
+                <input class="" type="text" name="key" id="key" value="">
+              </div>
+
+            </div>
+            
+          </form>
+        </div>
+      </div>      
+    
+      <div class="card m-3">
+  
+        <div class="card-body">
+          <h4 class="card-title">Cipher Text:</h4>
+
+          <div class="col col-12 mx-1">
+            <div id="matrix-div"></div>
+            <textarea readonly class="form-control" name="output" id="output"></textarea>
+          </div>
+
+        </div>
+      </div>
+      
+  </body>
+</html>
+
+
