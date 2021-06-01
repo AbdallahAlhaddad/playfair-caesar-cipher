@@ -8,3 +8,5 @@ https://abdallahalhaddad.github.io/playfair-caesar-cipher/
 3. open `index.html`
 3. `right click` on the code and choose `open with live server` option from the menu
 
+4. comment github links from the navbar an uncomment the local ones.
+    > Explanation: github adds the repository name as a prefix to all links path so you need to remove these prefixes when running locally
